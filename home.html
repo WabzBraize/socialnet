@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socialnet</title>
+    <!-- CSS HELPER UTILITY CLASSES STYLESHEET -->
+    <link rel="stylesheet" href="assets/css/simplified.css">
+
+    <!-- CUSTOM CSS STYLESHEET -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- FEATHER ICONS -->
+    <link rel="stylesheet" href="assets/feather-icons/feather.css">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <!-----------------Header--------------------------------- -->
+    <header class="shadow-md flex-align-center">
+        <nav class="container flex justify-between align-center">
+            <div class=" logo">
+                <a href="index.html">
+                    <h1><i class="feather-layers"></i> Social<span class="primary-color">net</span></h1>
+                </a>
+            </div>
+            <div class="search-bar">
+                <div class="input-with-icon transparent rounded-lg">
+                    <i class="feather-search"></i>
+                    <input type="search" name="" id="" class="form-control search"
+                        placeholder="Search for ceator. inspiration and projects">
+                </div>
+            </div>
+            <div class="profile flex align-center gap-2">
+                <button class="btn btn-danger btn-rounded h-fit-content create-post">Create post</button>
+                <img src="assets/images/istockphoto-491783647-170667a.jpg" alt=""
+                    class="profile-avatar-sm bd cursor-pointer">
+                <li class="theme-btn grid place-center cursor-pointer"><i class="feather-sun text-"></i>
+            </div>
+        </nav>
+    </header>
+    <!-----------------//Header--------------------------------- -->
+
+
+    <!-----------------Main--------------------------------- -->
+    <main class="container flex gap-1">
+        <section class="flex-5  p-1 flex gap-2">
+            <div class="tabs-left  flex-1 h-fit-content">
+                <!-- Profile -->
+                <div class="profile-info rounded flex align-center  p-1 gap-1">
+                    <img src="assets/images/istockphoto-491783647-170667a.jpg" alt="" class="profile-avatar bd">
+                    <div class="profile-name">
+                        <h3 class="text-16">Raven Kent</h3>
+                        <p class="text-muted text-12">@raven</p>
+                    </div>
+                </div>
+                <div class="tab-links mt-2">
+                    <ul>
+                        <li class="tab-link flex-center-between" id="posts">
+                            <div><i class="feather-credit-card"></i><span class="ml-1 text">Posts</span></div><span
+                                class="badge badge-primary mr-2" id="postsCount">0</span>
+                        </li>
+                        <li class="tab-link flex-center-between" id="profiles">
+                            <div><i class="feather-users"></i><span class="ml-1 text">Profiles</span></div><span
+                                class="badge badge-primary mr-2" id="profileCount">0</span>
+                        </li>
+                        <li class="tab-link  flex-center-between" id="photos">
+                            <div><i class="feather-image"></i><span class="ml-1 text">Photos</span></div><span
+                                class="badge badge-primary mr-2" id="photosCount"></span>
+                        </li>
+                        <li class="tab-link  flex-center-between" id="hobbies">
+                            <div><i class="feather-bar-chart"></i><span class="ml-1 text">Hobbies</span></div><span
+                                class="badge badge-primary mr-2" id="hobbiesCount">0</span>
+                        </li>
+                        <li class="tab-link flex-align-center" id="files"><i class="feather-file"></i><span
+                                class="ml-1 text">Files</span></li>
+                        <li class="tab-link flex-align-center" id="settings"><i class="feather-settings"></i><span
+                                class="ml-1 text">Settings</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-panels flex-5">
+                <!-- ----------------------POSTS TAB PANEL--------------------------------------- -->
+                <div class="tab-panel" data-id="posts">
+                    <article class="grid gap-1 post">
+                        <div class="status flex-1">
+                            <img src="assets/images/photo-1469460340997-2f854421e72f.jpg" alt="">
+                            <div class="status-text flex flex-col  justify-between h-100 p-1">
+                                <div class="img"><img src="assets/images/photo-1469460340997-2f854421e72f.jpg" alt=""
+                                        class="profile-avatar-sm"></div>
+                                <h4 class="text-white">Your Story</h4>
+                            </div>
+                        </div>
+                        <div class="status flex-1">
+                            <img src="assets/images/photo-1621784564114-6eea05b89863.jpg" alt="">
+                            <div class="status-text flex flex-col  justify-between h-100 p-1">
+                                <div class="img"><img src="assets/images/photo-1621784564114-6eea05b89863.jpg" alt=""
+                                        class="profile-avatar-sm"></div>
+                                <h4 class="text-white">Railey Kate</h4>
+                            </div>
+                        </div>
+                        <div class="status flex-1">
+                            <img src="assets/images/photo-1586078130702-d208859b6223.jpg" alt="">
+                            <div class="status-text flex flex-col  justify-between h-100 p-1">
+                                <div class="img"><img src="assets/images/photo-1586078130702-d208859b6223.jpg" alt=""
+                                        class="profile-avatar-sm"></div>
+                                <h4 class="text-white">Daniellah Scott</h4>
+                            </div>
+                        </div>
+                        <div class="status flex-1">
+                            <img src="assets/images/photo-1596285508507-5da6bec59433.jpg" alt="">
+                            <div class="status-text flex flex-col  justify-between h-100 p-1">
+                                <div class="img"><img src="assets/images/photo-1596285508507-5da6bec59433.jpg" alt=""
+                                        class="profile-avatar-sm"></div>
+                                <h4 class="text-white">Halsey Hails</h4>
+                            </div>
+                        </div>
+                        <div class="status flex-1">
+                            <img src="assets/images/wp3910360.jpg" alt="">
+                            <div class="status-text flex flex-col  justify-between h-100 p-1">
+                                <div class="img"><img src="assets/images/wp3910360.jpg" alt=""
+                                        class="profile-avatar-sm"></div>
+                                <h4 class="text-white">Orla Grant</h4>
+                            </div>
+                        </div>
+                        <div class="status flex-1">
+                            <img src="assets/images/photo-1529626455594-4ff0802cfb7e.jpg" alt="">
+                            <div class="status-text flex flex-col  justify-between h-100 p-1">
+                                <div class="img"><img src="assets/images/photo-1529626455594-4ff0802cfb7e.jpg" alt=""
+                                        class="profile-avatar-sm"></div>
+                                <h4 class="text-white">Jenny Verl</h4>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- Create Post -->
+                    <div class="add-post my-2">
+                        <h1 class="text-muted uppercase text-16 my-2">create a post</h1>
+                        <form action="" id="addPostsForm">
+                            <span class="text-13 danger-color" id="posts-error"></span>
+                            <div class="flex gap-2">
+                                <img src="assets/images/istockphoto-491783647-170667a.jpg" alt="" class="profile-avatar"
+                                    id="post-img">
+                                <textarea name="post-info" id="post-info" cols="30" rows="3" class="form-control"
+                                    placeholder="Enter post description here, #Hashtag @Mention..Link"></textarea>
+                            </div>
+                            <div class="uploads mt-2 flex mx-2 justify-evenly">
+                                <img src="" alt="" class="post-img" width="30">
+                                <input type="file" name="image" id="image" hidden class="image-input">
+                                <i class="feather-image  w-100 text-center image-icon"></i>
+                                <i class="feather-video  w-100 text-center"></i>
+                                <i class="feather-film  w-100 text-center"></i>
+                            </div>
+                            <button class="btn btn-primary btn-rounded right">post</button>
+                        </form>
+
+                    </div>
+                    <!-- All posts -->
+                    <div class="all-posts mt-5" id="allPostsContainer">
+                        <hr>
+                        <h1 class="text-muted uppercase text-16 my-2">all posts</h1>
+                        <!-- ALL POSTS GO HERE -->
+                    </div>
+                </div>
+
+                <!-- ----------------------PROFILE TAB PANEL--------------------------------------- -->
+                <div class="tab-panel" data-id="profiles">
+                    <div class="flex-center-between">
+                        <h1 class="text-muted text-18 uppercase my-2">PROFILES</h1>
+                        <button class="btn btn-danger btn-rounded add-btn add-profile-btn"><i class="feather-plus"></i>
+                            add
+                            profile</button>
+                    </div>
+                    <div class="all-profiles grid gap-1" id="userContainer">
+                        <!-- ALL USER`S PROFILES GO HERE -->
+                    </div>
+                </div>
+
+                <!-- ----------------------PHOTOS TAB PANEL--------------------------------------- -->
+                <div class="tab-panel" data-id="photos">
+                    <h1 class="text-muted text-18 uppercase my-2">PHOTOS</h1>
+                    <div class="photos grid gap-1" id="photosContainer">
+                        <!-- PHOTOS GO HERE -->
+                    </div>
+                </div>
+
+
+                <!-- ----------------------HOBBIES TAB PANEL--------------------------------------- -->
+                <div class="tab-panel" data-id="hobbies">
+                    <h1 class="text-muted text-18 uppercase ">hobbies</h1>
+                    <div class="add-hobbies">
+                        <form action="" id="addHobbiesform" class="mt-1 mr-2">
+                            <span class="text-13 danger-color" id="hobby-error"></span>
+                            <div class="form-input my-2">
+                                <label for="hobby-name" class="mb-1">Hobby name</label>
+                                <input type="text" name="hobby-name" id="hobby-name" class="form-control"
+                                    placeholder="Hobby name..">
+                            </div>
+                            <label for="description" class="mb-1">Hobby name</label>
+                            <textarea name="description" id="description" cols="30" rows="4" class="form-control mb-2"
+                                placeholder="Enter some hobby description"></textarea>
+                            <label for="hobby-image-input">Image</label>
+                            <div class="hobby-image-display">
+                                <input type="file" name="image" id="hobby-image-input" hidden>
+                                <img src="assets/images/coverphoto.png" alt="" id="hobby-image-file"
+                                    class="image cursor-pointer mt-2 rounded" height="200">
+                            </div>
+                            <button class="btn btn-primary btn-rounded mx-auto my-2">add</button>
+                        </form>
+                    </div>
+                    <hr>
+
+                    <!-- ALL HOBBIES -->
+                    <div class="all-hobbies">
+                        <h1 class="text-muted text-18 uppercase ">all hobbies</h1>
+
+                        <div class="hobbies-container mt-2">
+                            <div class="hobbies-timeline">
+                                <ul id="hobbiesList">
+                                    <!-- ALL HOBBIES GO HERE -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ----------------------FILES TAB PANEL--------------------------------------- -->
+                <div class="tab-panel" data-id="files">
+                    <h1 class="text-muted text-18 uppercase my-2">FILES</h1>
+                    <p class="text-muted italics">Upload your files here i.e resume, personal statements, pdfs, hobbies
+                    </p>
+                    <form action="" id="addFileForm">
+                        <div class="upload-box">
+                            <input type="file" name="file" id="file" hidden>
+                            <i class="feather-upload-cloud"></i>
+                            <p class="file">Browse file to upload</p>
+                        </div>
+                        <button class="btn btn-primary w-100 upload-btn" id="upload-btn">upload</button>
+                    </form>
+                    <table class="table table-bordered border-around mt-2">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>File Name</th>
+                                <th>File Size</th>
+                                <th>Date uploaded</th>
+                            </tr>
+                        </thead>
+                        <tbody id="fileList">
+                            <!-- FILES GO HERE -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ----------------------SETTINGS TAB PANEL--------------------------------------- -->
+                <div class="tab-panel" data-id="settings">
+                    <h1 class="text-muted text-18 uppercase my-2">SETTINGS</h1>
+                    <p class="text-muted">Customise your site to any theme and color</p>
+                    <h1 class="text-16 uppercase mt-3">COLOR THEME</h1>
+                    <div class="flex gap-1 color-pallete p-2">
+                        <div class="color cursor-pointer" style="background-color: #fd4332;"></div>
+                        <div class="color cursor-pointer" style="background-color:#6427ff;"></div>
+                        <div class="color cursor-pointer" style="background-color: #388b84;"></div>
+                        <div class="color cursor-pointer" style="background-color: #c49c1a;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- -------------------------------------PROFILES----------------------------------------------- -->
+        <section class="left-profiles shadow-sm flex-1 p-1 rounded-sm py-2 h-fit-content">
+            <div class="flex-center-between header">
+                <h1 class="text-16 uppercase text-muted">all profiles</h1>
+                <i class="feather feather-more-horizontal cursor-pointer"></i>
+            </div>
+            <hr>
+            <div id="sidebarProfilesContainer">
+                <!-- ALL SIDEBAR PROFILES GO HERE -->
+            </div>
+
+        </section>
+        <!-- --------------------------ADD PROFILE------------------------------- -->
+        <div class="add-profile">
+            <div class="add-profile-form p-2">
+                <div class="flex-center-between px-2">
+                    <h1 class="text-muted text-18 uppercase">add profile</h1>
+                    <div class="close-icon cursor-pointer"><i class="feather-delete"></i></div>
+                </div>
+                <form action="" id="addProfileForm" class="mt-2 mr-2">
+                    <span class="text-13 danger-color" id="error"></span>
+                    <div class="name grid gap-1">
+                        <div class="form-input">
+                            <label for="fname" class="mb-1">First Name</label>
+                            <input type="text" name="fname" id="fname" class="form-control" placeholder="First name..">
+                        </div>
+                        <div class="form-input">
+                            <label for="lname" class="mb-1">Last Name</label>
+                            <input type="text" name="lname" id="lname" class="form-control " placeholder="Last name..">
+                        </div>
+                    </div>
+                    <div class="form-input mt-2">
+                        <label for="username" class="mb-1">Username</label>
+                        <input type="text" name="username" id="username" class="form-control"
+                            placeholder="Username.. e.g. @brian123">
+                    </div>
+                    <div class="form-input mt-2">
+                        <label for="email" class="mb-1">Email</label>
+                        <input type="text" name="email" id="email" class="form-control" placeholder="Email Address">
+                    </div>
+                    <div class="form-input mt-2">
+                        <label for="postion" class="mb-1">Position</label>
+                        <input type="text" name="postion" id="position" class="form-control" placeholder="Position..">
+                    </div>
+
+                    <div class="form-input mt-2">
+                        <label for="dob" class="mb-1">Date of birth</label>
+                        <input type="date" name="dob" id="dob" class="form-control">
+                    </div>
+
+                    <div class="form-input mt-2 ">
+                        <p class="mb-1">Gender</p>
+                        <div class="flex gap-2">
+                            <label for="male" class="mb-1 flex-align-center "> <input type="radio" name="gender"
+                                    id="male" value="Male" class="mr-1 check"> Male</label>
+                            <label for="female" class="mb-1 flex-align-center"> <input type="radio" name="gender"
+                                    id="female" value="Female" class="mr-1 check"> Female</label>
+                        </div>
+
+                    </div>
+                    <div class="image-display">
+                        <input type="file" name="image" id="image-input" hidden>
+                        <img src="assets/images/coverphoto.png" alt="" id="image-file" class="image cursor-pointer">
+                    </div>
+
+                    <button class="btn btn-primary btn-rounded mx-auto mt-1">add</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-----------------//Main--------------------------------- -->
+
+
+    <!-----------------Footer--------------------------------- -->
+
+    <!-- <footer>
+        <p class="text-center text-bold text-16">&copy;2022. All Rights Reserved. Anka</p>
+    </footer> -->
+    <!-----------------//Footer--------------------------------- -->
+
+    <!-- CUSTOM SCRIPT -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/posts.js"></script>
+    <script src="assets/js/hobbies.js"></script>
+    <script src="assets/js/files.js"></script>
+    <script src="assets/js/profiles.js"></script>
+</body>
+</html>
