@@ -1,0 +1,609 @@
+:root {
+  /* Colors */
+  --primary-color: #fd4332;
+  --text-color-gray: #585858;
+  --text-color-light-gray: #bcbcbc;
+  --hover-color: rgb(227, 238, 255);
+  --text-color-light: #e5e5e5;
+  --light-color: #ffffff;
+  --light-text: #ffffff;
+  --header-bg: rgba(255, 255, 255, 0.505);
+  --primary-bg: #dff7ff;
+  --main-bg: #fbfdff;
+  --facebook-btn-color: #1352d1;
+  --twitter-btn-color: #1ca9ce;
+  --instagram-btn-color: #ff174f;
+  --hr-color: rgb(234, 235, 237);
+  --primary-color-soft: rgba(253, 67, 50, 0.2);
+}
+
+/* Dark Theme */
+[color-scheme="dark"] {
+  --main-bg: #0b1219;
+  --light-color: #101a25;
+  --text-color: #f2f9ff;
+  --hover-color: rgb(22, 33, 49);
+  --header-bg: rgba(17, 32, 46, 0.505);
+  --hr-color: rgb(69, 91, 118);
+}
+
+/* Light Theme */
+[color-scheme="light"] {
+  --light-color: #ffffff;
+  --light-text: #ffffff;
+  --primary-bg: #eafaff;
+  --text-color-gray: #2a3036;
+}
+
+:root[color-scheme="dark"] .form-control:not(.search),
+:root[color-scheme="dark"] .input-with-icon {
+  border: 1px solid rgb(44, 49, 66);
+}
+
+.form-control:focus:not(.search) {
+  border: 1px solid var(--primary-color);
+}
+
+:root[color-scheme="dark"] .form-control:focus:not(.search) {
+  border: 1px solid var(--primary-color);
+}
+
+:root[color-scheme="dark"] .profile-info {
+  border: 1px solid rgb(44, 49, 66);
+}
+
+/*---------------------- General styles------------------------------- */
+body {
+  font-family: "Nunito", sans-serif;
+  color: var(--text-color);
+  background-color: var(--main-bg);
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.facebook-bg {
+  background-color: var(--facebook-btn-color);
+}
+
+.twitter-bg {
+  background-color: var(--twitter-btn-color);
+}
+
+.instagram-bg {
+  background-color: var(--instagram-btn-color);
+}
+
+.btn:not(.socials .btn) {
+  background-color: var(--primary-color);
+}
+
+input,
+textarea {
+  background-color: transparent;
+}
+
+hr {
+  border-color: var(--hr-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit !important;
+}
+
+ul li {
+  list-style: none;
+}
+
+.bd {
+  border: 2px solid var(--primary-color);
+}
+
+.btn {
+  text-transform: uppercase;
+}
+
+img {
+  object-fit: cover;
+}
+
+/* ------------------Custom styles------------------------- */
+
+/* Navbar */
+header {
+  height: 45px;
+  background-color: var(--header-bg);
+  backdrop-filter: blur(50px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+/* Main */
+
+main.container {
+  margin: 45px auto 0.5rem auto;
+}
+
+.profile-info {
+  border: 1px solid var(--text-color-light-gray);
+}
+
+main .tab-links li {
+  padding: 0.6rem 0;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 0.4rem;
+  position: relative;
+}
+
+main .tab-links li i {
+  margin-left: 1rem;
+}
+
+main .tab-links li:hover {
+  background-color: var(--hover-color);
+}
+
+main .tab-links li.active {
+  background-color: var(--hover-color);
+}
+
+main .tab-links li.active::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 5px;
+  background-color: var(--primary-color);
+  top: 0;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.post {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.post .status img:not(.profile-avatar-sm) {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.post .status img {
+  transition: all 0.3s ease-in-out;
+}
+
+.post .status:hover img {
+  transform: scale(1.2);
+}
+
+.post .status {
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  height: 150px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.post .status::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.8));
+  left: 0;
+}
+
+.post .status .status-text {
+  position: absolute;
+  top: 0;
+}
+
+.post .status .status-text h4 {
+  font-size: var(--font-12);
+}
+
+.post .status .img img {
+  object-fit: cover;
+  object-position: top;
+  border: 3px solid var(--primary-color);
+}
+
+.uploads i {
+  cursor: pointer;
+  padding: 0.3rem 0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.uploads i:hover {
+  background-color: var(--hover-color);
+}
+
+.left-profiles {
+  background-color: var(--light-color);
+  margin-top: 0.5rem;
+  position: sticky;
+  top: 50px;
+}
+
+.post-card {
+  background-color: var(--light-color);
+}
+
+.post-card img {
+  height: 300px;
+}
+
+.tabs-left {
+  position: sticky;
+  top: 50px;
+}
+
+.all-profiles {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.profile-card {
+  background-color: var(--light-color);
+}
+
+.add-profile-btn {
+  font-size: var(--font-13) !important;
+  animation: zoom 1s infinite alternate ease-in;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  from {
+    transform: scale(1.2);
+  }
+}
+
+.photos {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.image-container {
+  overflow: hidden;
+  height: 300px;
+  cursor: pointer;
+}
+
+.image-container .image {
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover .image {
+  transform: scale(1.5);
+}
+
+.add-profile {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.add-profile-form {
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 360px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-color);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  transform: translateX(500px);
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+.add-profile .name {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.add-profile .image {
+  height: 100px;
+}
+
+.open {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: all;
+}
+
+.color {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.upload-box {
+  border: 1px dashed var(--primary-color);
+  height: 100px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  cursor: pointer;
+  color: var(--primary-color);
+  margin: 1rem 0;
+}
+
+.upload-box p {
+  font-size: 0.9rem;
+  margin-top: 0.6rem;
+}
+
+.upload-btn {
+  width: 100%;
+}
+
+/*------------------------------------------------------------------------ Styles for the hobbies section--------------------------------------------------------------------------- */
+/* hobbies-container that wrappers all the content */
+.hobbies-container {
+  width: 70%;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hobbies-timeline {
+  position: relative;
+  height: auto;
+}
+
+/* Add the line separating the odd and even hobbies */
+.hobbies-timeline::before {
+  position: absolute;
+  content: " ";
+  height: 91%;
+  width: 2px;
+  background-color: #101a25;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hobbies-timeline ul li {
+  list-style: none;
+  background-color: var(--light-color);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  width: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.hobbies-timeline ul li p {
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+/* Make all the odd hobbies float left and nothing on their right*/
+.hobbies-timeline ul li:nth-child(odd) {
+  float: left;
+  clear: right;
+  transform: translateX(-30px);
+}
+
+/* Make all the even hobbies float right and nothing on their left*/
+.hobbies-timeline ul li:nth-child(even) {
+  float: right;
+  clear: left;
+  transform: translateX(30px);
+}
+
+/* Adds the hand icon pointing to the hobby */
+.hobbies-timeline ul li::before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #101a25;
+  color: #fff;
+  font-family: "feather";
+  display: grid;
+  place-items: center;
+  line-height: 30px;
+}
+
+/* Add the pointer on the li container */
+.hobbies-timeline ul li::after {
+  position: absolute;
+  content: "";
+  border-width: 16px;
+  border-style: solid;
+}
+
+.hobbies-timeline ul li:nth-child(odd)::after {
+  top: 0.5rem;
+  right: -2rem;
+  border-color: transparent transparent transparent var(--light-color);
+}
+
+.hobbies-timeline ul li:nth-child(even)::after {
+  top: 0.5rem;
+  left: -2rem;
+  border-color: transparent var(--light-color) transparent transparent;
+}
+
+/* This adds the icon on the odd hobbies pseudo element */
+.hobbies-timeline ul li:nth-child(odd):before {
+  content: "\e92f";
+  top: 0;
+  right: -45px;
+}
+
+/* This adds the icon on the even hobbies pseudo element */
+.hobbies-timeline ul li:nth-child(even):before {
+  content: "\e930";
+  top: 0;
+  left: -45px;
+}
+
+/* Change background of the pseudo element when list in hovered */
+.hobbies-timeline ul li:hover::before {
+  background-color: var(--primary-color);
+}
+
+.all-hobbies .image {
+  height: 100px;
+  cursor: pointer;
+  overflow: hidden;
+  margin-top: 0.8rem;
+  position: relative;
+}
+
+.image h4 {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  transform: translateY(-300px);
+  background-color: rgba(137, 200, 167, 0.712);
+  padding: 1rem;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image img {
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* When the image is hovered, zoom the image */
+.image:hover img {
+  transform: scale(1.5);
+}
+
+/* When the image is hovered, show the h4 */
+.image:hover h4 {
+  transform: translateY(0);
+}
+
+/*------------------------------------------------------------------------/ End of Styles for the hobbies section--------------------------------------------------------------------------- */
+
+/* These styles apply for screens with a max width of 1024px */
+@media (max-width: 1024px) {
+  .hobbies-container {
+    width: 70%;
+  }
+
+  .image-container {
+    width: 90%;
+  }
+}
+
+/* These styles apply for screens with a max width of 750px */
+@media (max-width: 750px) {
+  .container {
+    width: 95%;
+  }
+
+  .profile-info {
+    display: none;
+  }
+
+  .tab-links li .text {
+    position: absolute;
+    top: -1.5rem;
+    left: -0.6rem;
+    background-color: var(--light-color);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+    padding: 0.3rem 0.8rem;
+    z-index: 1;
+    border-radius: 0.4rem;
+    display: none;
+  }
+
+  .tab-links li .text::before {
+    position: absolute;
+    content: "";
+    border-width: 7px;
+    border-style: solid;
+    border-color: var(--light-color) transparent transparent transparent;
+    bottom: -0.8rem;
+    z-index: 999;
+  }
+
+  .tab-links li {
+    justify-content: unset;
+  }
+
+  .tab-links li:hover .text {
+    display: block;
+  }
+
+  .tab-links li .badge {
+    position: absolute;
+    top: -2px;
+    margin-left: 1.5rem;
+  }
+
+  .hobbies-container {
+    width: 80%;
+  }
+  .hobbies-timeline ul li {
+    display: block;
+    width: 100%;
+    transform: translateX(0);
+  }
+}
+
+/* These styles apply for screens with a max width of 600px */
+@media (max-width: 700px) {
+  header .btn {
+    display: none;
+  }
+
+  .left-profiles .profile-card img {
+    width: 25px;
+    height: 25px;
+    margin: auto;
+  }
+
+  .left-profiles {
+    flex: none;
+    width: 50px !important;
+  }
+
+  .left-profiles .profile-card {
+    flex-shrink: 2;
+  }
+
+  .left-profiles .profile-card .info,
+  .left-profiles .header,
+  .left-profiles hr {
+    display: none;
+  }
+}
+
+/* These styles apply for screens with a max width of 450px */
+@media (max-width: 450px) {
+  header .input-with-icon {
+    width: 100px;
+  }
+}
